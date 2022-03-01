@@ -26,17 +26,26 @@ public class NumberUtilities {
         return getExponentiations(start, stop, step, 2);
     }
 
-    public static String getRange(int start) {
-        return null;
+    public static String getRange(int stop) {
+        String range = "";
+        for (int i = 0; i < stop; i++) {
+            range += i;
+        }
+        return range;
     }
 
     public static String getRange(int start, int stop) {
-        return null;
+        String range = getRange(start, stop, 1);
+        return range;
     }
 
 
     public static String getRange(int start, int stop, int step) {
-        return null;
+        String range = "";
+        for (int i = start; i < stop; i = i + step) {
+            range += i;
+        }
+        return range;
     }
 
 
