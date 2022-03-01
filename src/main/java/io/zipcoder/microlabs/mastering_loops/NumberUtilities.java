@@ -3,13 +3,13 @@ package io.zipcoder.microlabs.mastering_loops;
 
 public class NumberUtilities {
     public static String getEvenNumbers(int start, int stop) {
-    StringBuilder evenNumbers = new StringBuilder();
-    for (int i = start; i < stop; i++)
-        if (i % 2 == 0) {
-            evenNumbers.append(i);
-        }
-    String output = evenNumbers.toString();
-    return output;
+        StringBuilder evenNumbers = new StringBuilder();
+        for (int i = start; i < stop; i++)
+            if (i % 2 == 0) {
+                evenNumbers.append(i);
+            }
+        String output = evenNumbers.toString();
+        return output;
     }
 
     public static String getOddNumbers(int start, int stop) {
@@ -23,7 +23,7 @@ public class NumberUtilities {
 
 
     public static String getSquareNumbers(int start, int stop, int step) {
-        return null;
+        return getExponentiations(start, stop, step, 2);
     }
 
     public static String getRange(int start) {
@@ -41,6 +41,10 @@ public class NumberUtilities {
 
 
     public static String getExponentiations(int start, int stop, int step, int exponent) {
-        return null;
+        String output = "";
+        for (int i = start; i < stop; i = i + step) {
+            output += Math.round(Math.pow(i, exponent));
+        }
+        return output;
     }
 }
